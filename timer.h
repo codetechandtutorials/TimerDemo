@@ -8,7 +8,7 @@ public:
   }
   // restarts the start time to now, which basically resets the elapsed time count
   void Restart() {
-    _start_time = std::chrono::system_clock::now();
+    _start_time = _current_time = _last_delta_tick = std::chrono::system_clock::now();
   }
   // returns the amount of time since the last call to this function
   float GetDeltaTime() {
